@@ -1,12 +1,12 @@
 #!/bin/bash
-echo "Please enter directory name (full path if not in the root):"
+echo "Please enter directory (full path):"
 read -r Dir
 if [ ! -d "$Dir" ] 
 then
     echo "There is no such directory. Check it and run script again" 
     exit 1
 fi
-echo "Enter max file size(MB) to search:"
+echo "Enter min file/subdirectory size(MB) to search:"
 read -r MSize
 if ! [[ $MSize =~ ^[0-9]+$ ]] ; then
    echo "Sorry - this is not a valid integer - please enter a positive integer (run script again)"
