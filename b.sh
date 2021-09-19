@@ -8,7 +8,7 @@
 
 Odir=/tmp/b_test
 mkdir -p $Odir #create directory for files if it not exist
-cd $Odir || return #return using in case something went wrong and script cant change the directory to $Odir, so it will not fail and just will create files in current directory
+cd $Odir || exit
 
 for i in {1..10}
 do
